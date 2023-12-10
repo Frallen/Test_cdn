@@ -10,7 +10,7 @@ export default defineConfig(({mode})=>{return{
         lib: {
             entry: './src/main.ts',
             formats: ['es'],
-            fileName: 'buble',
+            fileName: 'widget',
         }
         },
     define: {
