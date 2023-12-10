@@ -6,5 +6,5 @@ const {isError} = storeToRefs(useMain())
 
 </script>
 <style lang="less">
-
+@import "tailwind.css";
 </style>
