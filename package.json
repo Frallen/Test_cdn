@@ -1,5 +1,5 @@
 {
-  "name": "my-lib",
+  "name": "widget",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,12 +11,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/my-lib.umd.cjs",
-  "module": "./dist/my-lib.js",
+  "main": "./dist/widget.js",
+  "module": "./dist/widget.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.js",
-      "require": "./dist/my-lib.umd.cjs"
+      "import": "./dist/widget.js",
+      "require": "./dist/widget.js"
     }
   },
   "dependencies": {
