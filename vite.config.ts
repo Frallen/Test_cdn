@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from "unplugin-vue-components/vite"
 import * as path from "path";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode})=>{return{
@@ -11,7 +12,22 @@ export default defineConfig(({mode})=>{return{
             entry: './src/main.ts',
             formats: ['es'],
             fileName: 'widget',
-        }
+        },
+        rollupOptions: {
+            // make sure to externalize deps that shouldn't be bundled
+            // into your library
+            external: ['vue'],
+            output: {
+              // Provide global variables to use in the UMD build
+              // for externalized deps
+              globals: {
+                vue: 'Vue',
+              },
+             
+                manualChunks: undefined,
+            
+            },
+          },
         },
     define: {
         "process.env.NODE_ENV": JSON.stringify(mode)
@@ -26,6 +42,7 @@ export default defineConfig(({mode})=>{return{
     },
     plugins: [
         vue(),
+        cssInjectedByJsPlugin(),
         Components({
             dirs: ['./src/components',"./src/pages"],
             dts: true
