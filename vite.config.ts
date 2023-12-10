@@ -8,10 +8,9 @@ import * as path from "path";
 export default defineConfig({
     build:{
         lib: {
-            entry: './src/main.ce.ts',
-            name: 'buble',
-            // the proper extensions will be added
-            fileName: 'buble'
+            entry: './src/main.ts',
+            formats: ['es'],
+            fileName: 'buble',
         }
         },
     server: {
@@ -21,16 +20,9 @@ export default defineConfig({
         alias: {
             '@': path.resolve(__dirname, 'src'),
         }
-    }, define: {
-        'process.env': process.env
     },
     plugins: [
-        vue({
-            template: {
-                compilerOptions: {
-                    isCustomElement: (tag) => tag.includes('Buble')
-                }
-            }}),
+        vue(),
         Components({
             dirs: ['./src/components',"./src/pages"],
             dts: true

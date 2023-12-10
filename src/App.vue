@@ -2,7 +2,7 @@
   <div>
     <Error v-if="isError"></Error>
     <div v-else class="container">
-    <BubleCe/>
+    <Buble/>
     </div>
   </div>
 </template>
