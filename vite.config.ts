@@ -5,7 +5,7 @@ import Components from "unplugin-vue-components/vite"
 import * as path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({mode})=>{return{
     build:{
         lib: {
             entry: './src/main.ts',
@@ -14,7 +14,7 @@ export default defineConfig({
         }
         },
     define: {
-        "process.env.NODE_ENV": `'${process.env.NODE_ENV}'`
+        "process.env.NODE_ENV": JSON.stringify(mode)
     },
     server: {
         port: 3000
@@ -57,4 +57,4 @@ export default defineConfig({
     css: {
 
     },
-})
+}})
