@@ -7,7 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Buble: typeof import('./src/components/Buble.vue')['default']
+    'Buble.ce': typeof import('./src/components/Buble.ce.vue')['default']
     Error: typeof import('./src/components/Error.vue')['default']
   }
 }
