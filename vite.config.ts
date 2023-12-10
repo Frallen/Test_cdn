@@ -13,6 +13,9 @@ export default defineConfig({
             fileName: 'buble',
         }
         },
+    define: {
+        "process.env.NODE_ENV": `'${process.env.NODE_ENV}'`
+    },
     server: {
         port: 3000
     },
