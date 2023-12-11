@@ -8,6 +8,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Buble: typeof import('./src/components/Buble.vue')['default']
+    Button: typeof import('primevue/button')['default']
     Error: typeof import('./src/components/Error.vue')['default']
+    Knob: typeof import('primevue/knob')['default']
+    Textarea: typeof import('primevue/textarea')['default']
   }
 }

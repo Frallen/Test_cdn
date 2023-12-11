@@ -1,0 +1,26 @@
+@mixin trs($var) {
+  transition: $var all;
+}
+
+@mixin br($var) {
+  border-radius: $var;
+}
+
+@mixin shadow-default {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+@mixin text-eclipse($var) {
+  display: -webkit-box !important;
+  -webkit-line-clamp: $var;
+  -webkit-box-orient: vertical !important;
+  text-overflow: ellipsis !important;
+}
+
+@mixin border-gray {
+  border-bottom: 1px solid theme('colors.gray.200');
+}
+
+@mixin offHighLight {
+  -webkit-tap-highlight-color: transparent;
+}

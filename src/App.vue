@@ -1,10 +1,14 @@
 <template>
-    <Buble/>
+  <div class="flex flex-col">
+    <Buble />
+    <Button label="fgg" />
+    <Textarea /></div>
 </template>
 <script setup lang="ts">
-//const {isError} = storeToRefs(useMain())
-
+const a = ref(0);
 </script>
-<style lang="less">
+<style lang="scss">
 @import "tailwind.css";
+@import "primevue/resources/themes/lara-light-blue/theme.css";
+@import "./assets/styles/main";
 </style>
