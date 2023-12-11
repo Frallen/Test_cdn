@@ -4,8 +4,8 @@ import {createPinia} from 'pinia'
 
 const pinia = createPinia()
 const app=createApp(App)
-document.body.insertAdjacentHTML('beforeend',`<div id="Wiki_diget"><chat-widget/></div>`)
-app.use(pinia).mount("#Wiki_diget")
+document.body.insertAdjacentHTML('beforeend',`<chat-widget/>`)
+app.use(pinia)
 
 const chatWidget = defineCustomElement({
     render: () => h(App),

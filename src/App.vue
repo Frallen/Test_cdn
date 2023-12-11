@@ -1,5 +1,5 @@
 <template>
-    
+    <Buble/>
 </template>
 <script setup lang="ts">
 //const {isError} = storeToRefs(useMain())
