@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         name: 'Example',
         tags: [
           {
-            name: 'CustomElementExample',
+            name: 'ChatWidget',
             path: '@/components/ChatWidget.ce.vue',
             options: {
               props: {
