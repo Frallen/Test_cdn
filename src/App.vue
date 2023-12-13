@@ -1,8 +1,5 @@
 <template>
-  <div class="flex flex-col">
-    <Buble />
-    <Button label="fgg" />
-    <Textarea /></div>
+    <Widget/>
 </template>
 <script setup lang="ts">
 const a = ref(0);

@@ -2,11 +2,13 @@ import { createApp, defineCustomElement, getCurrentInstance } from "vue";
 import App from "./App.vue";
 import { createPinia } from "pinia";
 import PrimeVue from "primevue/config";
+import PhosphorIcons from "@phosphor-icons/vue";
+
 
 const pinia = createPinia();
 const app = createApp(App);
 document.body.insertAdjacentHTML("beforeend", `<chat-widget/>`);
-app.use(pinia).use(PrimeVue, { ripple: true });
+app.use(pinia).use(PrimeVue, { ripple: true }).use(PhosphorIcons);
 
 const chatWidget = defineCustomElement({
     render: () => h(App),

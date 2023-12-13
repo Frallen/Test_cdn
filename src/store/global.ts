@@ -1,9 +1,9 @@
 interface stateType {
-    counter:number
+    isShow: boolean;
 }
 
-export const useGlobal=definePiniaStore("global",{
-    state:():stateType=>({
-        counter:1
-    })
-})
+export const useGlobal = definePiniaStore("global", {
+    state: (): stateType => ({
+        isShow: false,
+    }),
+});

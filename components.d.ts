@@ -7,10 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Buble: typeof import('./src/components/Buble.vue')['default']
-    Button: typeof import('primevue/button')['default']
+    Chat: typeof import('./src/components/Chat.vue')['default']
+    'Chat.ce': typeof import('./src/components/Chat.ce.vue')['default']
     Error: typeof import('./src/components/Error.vue')['default']
-    Knob: typeof import('primevue/knob')['default']
-    Textarea: typeof import('primevue/textarea')['default']
+    Widget: typeof import('./src/components/Widget.vue')['default']
+    'Widget.ce': typeof import('./src/components/Widget.ce.vue')['default']
   }
 }
