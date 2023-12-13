@@ -1,8 +1,10 @@
-name: Docker Image CI
+name: Deploy stage
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'stage.*.*.*'
+
 
 jobs:
 
@@ -20,16 +22,3 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      -
-        name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      -   name: Build and push
-          uses: docker/build-push-action@v4
-          with:
-            context: .
-            push: true
-            tags: ghcr.io/mvphero/wikilect-chatgpt-ui:latest,ghcr.io/mvphero/wikilect-chatgpt-ui:${{ github.ref_name }}
